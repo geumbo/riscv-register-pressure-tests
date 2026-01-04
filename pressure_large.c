@@ -1,7 +1,12 @@
-/* Large Variable Count Function (40 Variables) */
-/* This tests if 32 Registers are enough when SW demand is 40. */
+/* Large Variable Count Function (40 Variables)
+ * This tests if 32 Registers are enough when SW demand is 40.
+ */
 
-__attribute__((noinline)) int large_pressure(int seed, int iters)
+#ifndef TEST_FUNC_NAME
+#define TEST_FUNC_NAME large_pressure
+#endif
+
+__attribute__((noinline)) int TEST_FUNC_NAME(int seed, int iters)
 {
     /* 40 Local Variables */
     int v0 = seed;

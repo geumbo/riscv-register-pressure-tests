@@ -98,9 +98,9 @@ $(BUILD_DIR)/restricted_func.S: pressure_func.c
 
 # 6. Large (40 Vars, Normal Flags)
 $(BUILD_DIR)/large_func.o: pressure_large.c
-	$(CC) $(CFLAGS) $< -o $@ -c
+	$(CC) $(CFLAGS) -DTEST_FUNC_NAME=large_pressure $< -o $@ -c
 $(BUILD_DIR)/large_func.S: pressure_large.c
-	$(CC) $(CFLAGS) -S $< -o $@
+	$(CC) $(CFLAGS) -DTEST_FUNC_NAME=large_pressure -S $< -o $@
 
 # 7. Unrolled Normal
 $(BUILD_DIR)/unroll_normal_func.o: pressure_unroll.c

@@ -1,3 +1,11 @@
+/* Baseline Pressure Function (20 Variables)
+ * Tests the "Tipping Point" of register supply vs demand.
+ */
+
+#ifndef TEST_FUNC_NAME
+#define TEST_FUNC_NAME pressure_func
+#endif
+
 __attribute__((noinline)) int TEST_FUNC_NAME(int seed, int iters)
 {
     // 20 variables

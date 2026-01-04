@@ -1,5 +1,5 @@
-/* Unrolled Function (4x Loop Unrolling) */
-/* Tests if Register Count affects the viability of Loop Unrolling optimization.
+/* Unrolled Function (4x Loop Unrolling)
+ * Tests if Register Count affects the viability of Loop Unrolling optimization.
  */
 
 #ifndef TEST_FUNC_NAME
