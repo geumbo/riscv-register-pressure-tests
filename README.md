@@ -2,7 +2,12 @@
 
 A hands-on experiment demonstrating how **Register File Size** impacts compiler optimization and software performance.
 
-Using [`rv32emu`](https://github.com/sysprog21/rv32emu) and GCC register-fixing flags (`-ffixed-reg`), we simulate processors with varying register counts (32 down to 16) to verify the performance "Cliff".
+Using [`rv32emu`](https://github.com/sysprog21/rv32emu) and GCC register-fixing flags (`-ffixed-reg`), this project simulates processors with varying register counts (32 down to 16) to verify the performance "Cliff".
+
+### Experiments
+1. **The Supply Cliff**: Gradually reducing available registers (32 -> 16) pinpoints exactly when the compiler runs out of space and performance crashes.
+2. **The Demand Overload**: Doubling the number of variables (20 -> 40) on standard hardware proves that `Demand > Supply` guarantees spilling even on 32-bit systems.
+3. **Optimization Freedom**: Attempting aggressive **Loop Unrolling** on restricted hardware demonstrates that low register count makes advanced optimizations counter-productive (slower code).
 
 ## Usage
 
