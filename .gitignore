@@ -1,0 +1,9 @@
+build/
+*.o
+*.elf
+*.su
+
+*.S
+!perfcounter.S
+!start.S
+*.log
